@@ -17,7 +17,7 @@ const StoryPreview = ({ story }: { story: Story }) => {
         <p className={styles.category}>{story.category}</p>
         <h3 className={styles.title}>{story.title}</h3>
         <p className={styles.excerpt}>{story.excerpt}</p>
-        <div>
+        <div className={styles.date}>
           <span>{story.date}</span>
           <span> · </span>
           <span>{story.readTime} min</span>
