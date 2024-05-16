@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { Story, StoryList } from "@/components/story-list/story-list";
-import { Header } from "@/components/header/header";
 
 interface HomeProps {
   stories: Story[];
