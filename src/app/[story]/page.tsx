@@ -10,9 +10,7 @@ export const generateStaticParams = async () => {
 };
 
 const getStoryContent = async (storyId: string) => {
-  const res = await fetch(`${process.env.API_PATH}/story/${storyId}`, {
-    cache: "no-cache",
-  });
+  const res = await fetch(`${process.env.API_PATH}/story/${storyId}`);
   const data = await res.json();
   return data;
 };

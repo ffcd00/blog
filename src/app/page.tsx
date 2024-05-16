@@ -7,10 +7,8 @@ interface HomeProps {
   stories: Story[];
 }
 
-export const getStoryList = async (): Promise<Story[]> => {
-  const res = await fetch(`${process.env.API_PATH}/story-list`, {
-    cache: "no-cache",
-  });
+const getStoryList = async (): Promise<Story[]> => {
+  const res = await fetch(`${process.env.API_PATH}/story-list`);
   const data = await res.json();
   return data?.stories;
 };
