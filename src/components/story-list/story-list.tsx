@@ -1,19 +1,20 @@
 import Link from "next/link";
 import styles from "./story-list.module.css";
 
-interface Story {
+export interface Story {
   id: string;
   title: string;
   date: string;
   excerpt: string;
   readTime: number;
+  category: string;
 }
 
 const StoryPreview = ({ story }: { story: Story }) => {
   return (
     <Link className={styles.link} href={story.id} legacyBehavior>
       <div className={styles.story}>
-        <p className={styles.category}>ethics</p>
+        <p className={styles.category}>{story.category}</p>
         <h3 className={styles.title}>{story.title}</h3>
         <p className={styles.excerpt}>{story.excerpt}</p>
         <div>
