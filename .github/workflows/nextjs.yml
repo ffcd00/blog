@@ -36,6 +36,7 @@ jobs:
         with:
           repository: ffcd00/lessay
           path: "lessay"
+          ssh-key: ${{ secrets.SSH_KEY }}
       - name: Detect package manager
         id: detect-package-manager
         run: |
